@@ -1,0 +1,119 @@
+/* ===== Root Variables ===== */
+:root {
+  --bg-white: #ffffff;
+  --bg-ivory: #fffefc;
+  --text-gray: #5a534f;
+  --text-gold: #c99f5c;
+  --accent-gold: #f3e8c6;
+  --shadow-gold: rgba(255, 215, 150, 0.6);
+  --button-bg: #fffaf2;
+  --button-color: #b8902f;
+  --button-hover-shadow: rgba(255, 223, 120, 0.9), rgba(255, 255, 255, 0.6);
+  --highlight-color: #b8902f;
+  --highlight-hover: #ffd966;
+  --scrollbar-track: #fffaf2;
+  --scrollbar-thumb: #d6b850;
+  --scrollbar-thumb-hover: #b8902f;
+}
+
+/* ===== General Body ===== */
+body {
+  font-family: 'Newsreader', serif;
+  background-color: var(--bg-ivory);
+  color: var(--text-gray);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* ===== Sections ===== */
+section {
+  padding: 1.5rem 0;
+  background: linear-gradient(to bottom, var(--bg-white), var(--bg-ivory));
+}
+
+/* Header Section */
+header#home {
+  padding: 2rem 0;
+  background: linear-gradient(90deg, var(--bg-white), var(--accent-gold));
+  border-bottom: 2px solid var(--accent-gold);
+}
+
+/* ===== Floral Border ===== */
+.floral-border::before {
+  content: '';
+  display: block;
+  width: 150px;
+  height: 20px;
+  margin: 0 auto 0.35rem;
+  background: linear-gradient(90deg, #fef4d4, #fffefc, #fef4d4);
+  border-radius: 20px;
+  box-shadow: 0 0 12px var(--shadow-gold);
+}
+
+/* ===== Scroll to Top Button ===== */
+#goTopBtn {
+  background: var(--button-bg);
+  color: var(--button-color);
+  border: 1px solid var(--accent-gold);
+  border-radius: 50%;
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.4s;
+}
+
+#goTopBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px var(--button-hover-shadow);
+}
+
+/* ===== Highlight Kartik ===== */
+.highlight-kartik {
+  font-size: 1.1rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: var(--highlight-color);
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.highlight-kartik:hover {
+  color: var(--highlight-hover);
+  text-shadow: 0 0 12px rgba(255, 235, 180, 0.8);
+}
+
+/* ===== Headings ===== */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-gold);
+  text-shadow: 0 0 6px rgba(255, 223, 120, 0.7);
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+/* ===== Paragraphs ===== */
+p.fs-5 {
+  margin-bottom: 0.5rem;
+  line-height: 1.55;
+  color: var(--text-gray);
+}
+
+/* ===== Scrollbar ===== */
+body::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+/* ===== Small Text ===== */
+.small {
+  font-weight: 400 !important;
+  font-size: 22px !important;
+}
